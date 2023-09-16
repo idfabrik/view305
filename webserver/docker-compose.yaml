@@ -1,0 +1,15 @@
+version: "3.5"
+
+services:
+    php8:
+        image: php8/apache-php:8-apache
+        container_name: php8
+        build:
+            context: ./
+            dockerfile: Dockerfile
+        ports:
+            - "800:80"
+        #    - "441:443"
+        restart: unless-stopped
+        volumes:
+            -  ../view305_public/:/var/www/html/

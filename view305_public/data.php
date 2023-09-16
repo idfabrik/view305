@@ -21,10 +21,17 @@ $chap_01["titre"]="L'Atelier / TRANS305 s'installe au coeur du chantier";
 $chap_01["video"]["youtube"]="iwcRbM6FfN8"; // // video youtube - code de la vidéo
 
 // liste des boutons
-$chap_01[vignette][1]["titre"]="Livreur de prédalle";
-$chap_01[vignette][1]["sous-titre"]="La sécurité, t'as compris ?";
-$chap_01[vignette][1]["couleur"]="";
-$chap_01[vignette][1]["slider"]="chap01/img_slider_predalle/";
+$chap_01["vignette"][1]["titre"]="Livreur de prédalle";
+$chap_01["vignette"][1]["sous-titre"]="La sécurité, t'as compris ?";
+$chap_01["vignette"][1]["couleur"]="#a61e4b";
+$chap_01["vignette"][1]["youtube"]="SVOOcO9xpYc";
+
+
+#$chap_01["vignette"][1]["slider"]="chap01/img_slider_predalle/";
+
+$chap_01["vignette"][1]["img"]="https://img.youtube.com/vi/SVOOcO9xpYc/0.jpg"; // , 480 x 360 px.
+
+ 
 
 
 
@@ -35,10 +42,10 @@ $chap_02["titre"]="Le montage est terminé. L'atelier accueil habitants, étudia
 $chap_02["video"]["youtube"]="eF5r25aqZTw";
 
 
-$chap_02[vignette][1]["titre"]="Effet cocktail party";
-$chap_02[vignette][1]["sous-titre"]="Résidence et concert d'Antoirer Bellanger";
-$chap_02[vignette][1]["youtube"]="";
-$chap_02[vignette][1]["couleur"]="";
+$chap_02["vignette"][1]["titre"]="Effet cocktail party";
+$chap_02["vignette"][1]["sous-titre"]="Résidence et concert d'Antoirer Bellanger";
+$chap_02["vignette"][1]["youtube"]="";
+$chap_02["vignette"][1]["couleur"]="";
 
 
 /* CHAPITRE 3 ---------------------------------------------- */

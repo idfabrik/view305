@@ -1,3 +1,5 @@
+<?php include"data.php"; ?>
+
 <!DOCTYPE html>
 <html lang="fr-FR" >
 
@@ -52,6 +54,59 @@ margin-left: -300px;}
 }
 
 
+
+
+
+/* roll over */ 
+
+ .vignette:hover p {
+    display: none
+    }
+
+
+.vignette:hover:before{  
+   content: "";
+  padding-top: 60px;   color: #ffffff;   text-transform: uppercase;
+
+
+ }
+
+
+.vignette { 
+  position: relative; 
+  width: 300px;
+  height: 90px;
+  color: #fff;
+  padding-top: 60px;
+  background-size: 150px;
+    
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-size: 300px 150px !important ;
+
+
+  
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.6;
+  }
+}
+
+
+.txt  {
+  position: relative;
+  color: #ffffff;  
+  text-align: center;
+}
+
+
+
+
 </style>
 
 
@@ -61,18 +116,65 @@ lien de la chaine youtube https://www.youtube.com/@VIEW305_webdocu
  --->
 
 
+<div id="menu"><p><a href="#"><?php print $menu[1]; ?></a> - <a href="#"><?php print $menu[2]; ?></a> - <a href="#"><?php print $menu[3]; ?></a></p></div>
 
-<div id="menu"><p><a href="#">1.motage</a> - <a href="#">2.usage</a> - <a href="#">3.démontage</a></p></div>
+
+
+
+
 
 <div id="home"><img src="img/home_view305_img_01.jpg"/></div>
 
-<p class="center">L’Atelier / TRANS305 s’installe au coeur du chantier</p>
+<p class="center"><?php print $chap_01["titre"] ; ?></p>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/iwcRbM6FfN8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/<?php print $chap_01["video"]["youtube"] ; ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-<div id="chap1" ><img class="w_100" src="img/chap1/bg_chap1_1.jpg"/></div>
+<div id="chap1" ><img class="w_100" src="<?php print $chap_01["grande_img"] ;?>"/></div><!-- img/chap1/bg_chap1_1.jpg -->
+
+
+
 
 <div id="menu_chap_01">
+
+
+<hr/>
+
+<?php 
+$i=1;
+?>
+
+
+
+
+
+
+
+  <a  onclick="puch_content(slide_01); document.getElementById('slider_photo').style.display = 'block' ;">
+
+<div class="vignette" style="background: url('img/vignettes_videos_youtube/<?php print $chap_01["vignette"][1]["youtube"] ?>.jpg');" >
+  <p class="txt"><?php print $chap_01["vignette"][$i]["titre"]; ?></p>
+</div>
+  </a>
+
+<style type="text/css">
+  .vignette { &::before {    background-color: <?php print $chap_01["vignette"][1]["couleur"] ; ?>  }}
+  .vignette:hover:before { content: "<?php print $chap_01["vignette"][1]["sous-titre"] ?>" }
+}
+</style>
+
+
+
+
+
+
+
+
+
+
+
+<hr/>
+
+
 
   <a  onmouseover="show_img('cha1_img2')" onmouseout="reset_over()" onclick="puch_content(slide_01); document.getElementById('slider_photo').style.display = 'block' ;">
     <img src="img/chap1/btn2_o.png">
@@ -163,16 +265,6 @@ lien de la chaine youtube https://www.youtube.com/@VIEW305_webdocu
  }
  
 </script>
-
-
-
-
-
-
-
-
-
-
 
 
 
