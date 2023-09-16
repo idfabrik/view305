@@ -32,7 +32,13 @@ $chap_01["vignette"][1]["youtube"]="SVOOcO9xpYc";
 $chap_01["vignette"][1]["img"]="https://img.youtube.com/vi/SVOOcO9xpYc/0.jpg"; // , 480 x 360 px.
 
  
-
+/*
+$chap_01[vignette][1]["titre"]="Livreur de prédalle";
+$chap_01[vignette][1]["sous-titre"]="La sécurité, t'as compris ?";
+$chap_01[vignette][1]["couleur"]="";
+$chap_01[vignette][1]["slider"]="chap01/img_slider_predalle/";
+$chap_01[vignette][1]["video"]="eF5r25aqZTw";
+*/
 
 
 /* CHAPITRE 2 ---------------------------------------------- */
